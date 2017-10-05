@@ -4,6 +4,7 @@
 var template = require('../templates/workshopList')
 var templateDetails = require('../templates/workshopSite')
 var pug = require('pug')
+var sqlite3 = require('sqlite3').verbose();
 
 
 module.exports = function (config) {
@@ -25,7 +26,6 @@ module.exports = function (config) {
     }
 
     function rateWorkshop(request, response){
-        var sqlite3 = require('sqlite3').verbose();
         var db = new sqlite3.Database('results.db');
         db.run("INSERT into workshops_ratings (symbol, ratings) VALUES ('"+request.params.workshopSymbol+"',"+request.params.workshopRatings+")");
         var html = pug.render(templateDetails, {
@@ -45,11 +45,19 @@ module.exports = function (config) {
         response.send(html)
     }
 
+    function  getWorkshopResults(request, response){
+        var db = new sqlite3.Database('results.db');
+        db.all("SELECT * FROM workshops_ratings",function(err,rows){
+            response.send(rows)
+        });
+
+    }
     
     return {
         getWorkshopList,
         getWorkshopDetails,
-        rateWorkshop
+        rateWorkshop,
+        getWorkshopResults
     }
 }
 

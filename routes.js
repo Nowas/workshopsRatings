@@ -8,6 +8,7 @@ module.exports = function(config){
     router.get('/', workshops.getWorkshopList)
     router.get('/workshops/:workshopSymbol', workshops.getWorkshopDetails)
     router.get('/workshops/:workshopSymbol/:workshopRatings', workshops.rateWorkshop)
+    router.get('/results', workshops.getWorkshopResults)
     
     return router
 }
