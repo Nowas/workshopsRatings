@@ -30,16 +30,26 @@ html(lang="en")
 
     h2(style='width:100%') #{workshopsName} 
     
-    a(class='button minus' href='#minus')
+    a(class='button minus smiley-red' href='#minus')
       span(class='bg bg-red' id='minus')
-      span(class='symbol')
-    a(class='button zero' href='#zero')
+      div(class='left-eye')
+      div(class='right-eye')
+      div(class='smile')
+    a(class='button zero smiley-yellow' href='#zero')
       span(class='bg bg-yellow' id='zero')
-      span(class='symbol')
-    a(class='button plus' href='#plus')
+      div(class='left-eye')
+      div(class='right-eye')
+      div(class='smile')
+    a(class='button plus smiley-green' href='#plus')
       span(class='bg bg-green' id='plus')
-      span(class='symbol')
+      div(class='left-eye')
+      div(class='right-eye')
+      div(class='smile')
     span(class='cancel')
       a(id='send' href='#') 
         | Wyślij
+
+        <div class='left-eye'></div>
+        <div class='right-eye'></div>
+        <div class='smile'></div>
 `

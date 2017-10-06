@@ -47,15 +47,6 @@ html {
     transition: all 0.2s linear;
   }
   
-  .bg-red {
-    background-color: #ffe6e6;
-  }
-  .bg-green {
-    background-color: #e6ffe6;
-  }
-  .bg-yellow {
-    background-color: #ffffe6;
-  }
   .cancel {
     flex: 1 1 100%;
     margin-top: 1rem;
@@ -82,40 +73,7 @@ html {
   .cancel a:active {
     background-color: rgba(255, 255, 255, 0.2);
   }
-  
-  .symbol::before,
-  .symbol::after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    display: block;
-    margin: auto;
-    border-radius: 2px;
-    content: "";
-  }
-  
-  .symbol::before {
-    width: 4rem;
-    height: 1rem;
-    background-color: #515676;
-    transition: background-color 0.3s linear;
-  }
-  
-  .plus .symbol::after {
-    width: 1rem;
-    height: 4rem;
-    background-color: #515676;
-  }
-  
-  .zero .symbol::after {
-    width: 4rem;
-    height: 4rem;
-    background-color: #515676;
-    border-radius: 1rem
-  }
-  
+    
   .bg::before,
   .bg::after {
     position: absolute;
@@ -142,29 +100,24 @@ html {
   }
   
   #plus:target {
-    background-color: #1aff1a;
+    background-color: #019c01;
+    border: 5px solid #a3f0a3;
     transform: scale(1.1);
     transition: all 0.2s linear;
   }
   
   #minus:target {
     background-color: #ff0000;
+    border: 5px solid #ff8b8b;
     transform: scale(1.1);
     transition: all 0.2s linear;
   }
-  
-  #minus2:target + .symbol::before {
-    background-color: #def186;
-  }
-  
+    
   #zero:target {
-    background-color: #ffff00;
+    background-color: #ffca00;
+    border: 5px solid #ffe484;
     transform: scale(1.1);
     transition: all 0.2s linear;
-  }
-  
-  #zero:target + .symbol::before {
-    background-color: #def186;
   }
   
   .bg:target::before,
@@ -203,4 +156,157 @@ html {
       opacity: 0
     }
   }
+  
+  #wrapper {
+    max-width: 300px;
+    margin: 120px auto;
+    padding: 0px 20px;
+  }
+  .floatleft {
+    float: left;
+  }
+  [class^="smiley-"] {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  .smiley-green {
+    background: #a9db7a;
+    border: 5px solid #92c563;
+    position: relative;
+  }
+  .smiley-green .left-eye {
+    width: 18%;
+    height: 18%;
+    background: #84b458;
+    position: relative;
+    top: 29%;
+    left: 22%;
+    border-radius: 50%;
+    float: left;
+  }
+  .smiley-green .right-eye {
+    width: 18%;
+    height: 18%;
+    border-radius: 50%;
+    position: relative;
+    background: #84b458;
+    top: 29%;
+    right: 22%;
+    float: right;
+  }
+  .smiley-green .smile {
+    position: absolute;
+    top: 67%;
+    left: 16.5%;
+    width: 70%;
+    height: 20%;
+    overflow: hidden;
+  }
+  .smiley-green .smile:after,
+  .smiley-green .smile:before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 0%;
+    border-radius: 50%;
+    background: #84b458;
+    height: 100%;
+    width: 97%;
+  }
+  .smiley-green .smile:after {
+    background: #84b458;
+    height: 80%;
+    top: -40%;
+    left: 0%;
+  }
+  
+  .smiley-yellow {
+    background: #eed16a;
+    border: 5px solid #dbae51;
+    position: relative;
+  }
+  .smiley-yellow .left-eye {
+    width: 18%;
+    height: 18%;
+    background: #dba652;
+    position: relative;
+    top: 29%;
+    left: 22%;
+    border-radius: 50%;
+    float: left;
+  }
+  .smiley-yellow .right-eye {
+    width: 18%;
+    height: 18%;
+    border-radius: 50%;
+    position: relative;
+    background: #dba652;
+    top: 29%;
+    right: 22%;
+    float: right;
+  }
+  .smiley-yellow .smile {
+    position: absolute;
+    top: 67%;
+    left: 19%;
+    width: 65%;
+    height: 14%;
+    background: #dba652;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .smiley-red {
+    background: #ee9295;
+    border: 5px solid #e27378;
+    position: relative;
+  }
+  .smiley-red .left-eye {
+    width: 18%;
+    height: 18%;
+    background: #d96065;
+    position: relative;
+    top: 29%;
+    left: 22%;
+    border-radius: 50%;
+    float: left;
+  }
+  .smiley-red .right-eye {
+    width: 18%;
+    height: 18%;
+    border-radius: 50%;
+    position: relative;
+    background: #d96065;
+    top: 29%;
+    right: 22%;
+    float: right;
+  }
+  .smiley-red .smile {
+    position: absolute;
+    top: 57%;
+    left: 16.5%;
+    width: 70%;
+    height: 20%;
+    overflow: hidden;
+  }
+  .smiley-red .smile:after,
+  .smiley-red .smile:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    border-radius: 50%;
+    background: #d96065;
+    height: 100%;
+    width: 97%;
+  }
+  .smiley-red .smile:after {
+    background: #d96065;
+    height: 80%;
+    top: 60%;
+    left: 0%;
+  }
+  
   
