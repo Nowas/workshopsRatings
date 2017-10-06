@@ -27,7 +27,12 @@ module.exports = function (config) {
 
     function rateWorkshop(request, response){
         var db = new sqlite3.Database('results.db');
-        db.run("INSERT into workshops_ratings (symbol, ratings) VALUES ('"+request.params.workshopSymbol+"',"+request.params.workshopRatings+")");
+        db.run("INSERT into workshops_ratings (symbol, ratings, ts) VALUES ('"+
+            request.params.workshopSymbol+"',"+
+            request.params.workshopRatings+",'"+
+            new Date().toISOString()+
+        "')");
+        
         var html = pug.render(templateDetails, {
             'workshopsSymbol': request.params.workshopSymbol,
             'workshopsName': config.workshops[request.params.workshopSymbol],
