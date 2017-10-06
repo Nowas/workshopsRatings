@@ -27,8 +27,8 @@ html {
   
   .button {
     position: relative;
-    width: 10rem;
-    height: 10rem;
+    width: 15rem;
+    height: 15rem;
     margin: 1rem;
     border-radius: 50%;
   }
