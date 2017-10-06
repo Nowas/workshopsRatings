@@ -26,8 +26,8 @@ html(lang="en")
       })
 
     body
+    
     h1(style='width:100%') #{workshopsSymbol}
-
     h2(style='width:100%') #{workshopsName} 
     
     a(class='button minus smiley-red' href='#minus')
@@ -49,7 +49,6 @@ html(lang="en")
       a(id='send' href='#') 
         | Wyślij
 
-        <div class='left-eye'></div>
-        <div class='right-eye'></div>
-        <div class='smile'></div>
+    span(style='width:100%;padding-top:30px')
+      a(style='right:0' href='http://koderek.edu.pl/wolon.html') Powrót
 `
