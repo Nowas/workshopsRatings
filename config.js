@@ -27,7 +27,7 @@ module.exports = {
 "Prelekcja 15+":"[13:00-13:20] Netart - kiedy internet był nieokrzesany [Libel]",
 "Prelekcja 15+":"[13:30-14:20] Edukacja humanistyczna w epoce cyfrowej - Nowa Panorama Literatury Polskiej jako pomoc dydaktyczna [Rams]",
 "Panel ekspertów":"[14:30-15:30] Panel ekspertów []",
-"Konkurs":"[15:30-15:50] Rozstrzygnięcie konkursu "aktywny uczestnik" []",
+"Konkurs":"[15:30-15:50] Rozstrzygnięcie konkursu 'aktywny uczestnik' []",
 "Prelekcja 15+":"[10:30-11:20] Zawody przyszłości - czym będziesz się zajmował za kilka lat? [Kołodziejczyk]",
 "Prelekcja 15+":"[11:30-12:20] Jak wykorzystywać Social Media do swojego rozwoju [Woszczyk]",
 "Prelekcja 15+":"[12:30-13:20] Przedsiębiorcą Być albo Nie Być [Boulangé]",
