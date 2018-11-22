@@ -1,4 +1,5 @@
-module.exports = {"P01.5+___Agora":"[10:00-10:20] Otwarcie konferencji [Żmijewski]",
+module.exports = {
+    "workshops": {"P01.5+___Agora":"[10:00-10:20] Otwarcie konferencji [Żmijewski]",
 "K01.5+___Agora":"[10:20-10:40] Internet Of Things - świat przyszłości [Maliszewski]",
 "K06.5+___Agora":"[10:40-11:00] Kodowanie robota Photon [Kowalewski]",
 "K03.5+___Agora":"[11:00-11:20] Programowanie robota Lego Boost [Wiesiołek]",
